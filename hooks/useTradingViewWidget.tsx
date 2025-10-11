@@ -1,8 +1,8 @@
 'use client'
-import {useEffect, useRef} from 'react'
+import {memo, useEffect, useRef} from 'react'
 import React from 'react'
 
-export const UseTradingViewWidget = (scriptUrl:string, config:Record<string , unknown>, height=600) => {
+export const useTradingViewWidget = (scriptUrl:string, config:Record<string , unknown>, height=600) => {
     const containerRef = useRef<HTMLDivElement | null>(null)
     useEffect(() => {
             if(!containerRef.current) return;
